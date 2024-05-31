@@ -57,3 +57,54 @@ footer {
     max-width: 100%;
     height: auto;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+}
+.bike-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bike-item {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: calc(33% - 20px);
+    box-sizing: border-box;
+}
+
+.bike-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .bike-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .bike-item {
+        width: 100%;
+    }
+}
+body {
+    background-image: url('bicycle-route-backround.jpg');
+    /* Alte stiluri CSS pentru pagina de index */
+}
+body {
+    background-image: url('path/to/background_image_catalog.jpg');
+    /* Alte stiluri CSS pentru pagina de catalog */
+}
+body {
+    background-image: url('path/to/background_image_reservation.jpg');
+    /* Alte stiluri CSS pentru pagina de rezervare */
+}
+
