@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Reservation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bike Rental Service</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Bike Reservation</h2>
+        <form id="reservation-form">
+            <label for="bike-type">Bike Type:</label>
+            <input type="text" id="bike-type" name="bike-type" required>
+            <label for="pickup-location">Pickup Location:</label>
+            <input type="text" id="pickup-location" name="pickup-location" required>
+            <label for="pickup-date">Pickup Date:</label>
+            <input type="date" id="pickup-date" name="pickup-date" required>
+            <label for="return-date">Return Date:</label>
+            <input type="date" id="return-date" name="return-date" required>
+            <button type="submit">Reserve</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Bike Rental Service</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
