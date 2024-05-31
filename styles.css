@@ -97,14 +97,19 @@ body {
 }
 body {
     background-image: url('bicycle-route-backround.jpg');
+    background-size: cover;
+    background-position: center;
     /* Alte stiluri CSS pentru pagina de index */
 }
 body {
     background-image: url('path/to/background_image_catalog.jpg');
+
     /* Alte stiluri CSS pentru pagina de catalog */
 }
 body {
-    background-image: url('path/to/background_image_reservation.jpg');
+    background-image: url('backround2.jpg');
+    background-size: cover;
+    background-position: center;
     /* Alte stiluri CSS pentru pagina de rezervare */
 }
 

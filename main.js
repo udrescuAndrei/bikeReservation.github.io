@@ -40,3 +40,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+function searchBikes() {
+    // Obține termenul de căutare introdus de utilizator
+    var searchTerm = document.getElementById('search-input').value.toLowerCase();
+
+    // Obține lista de biciclete
+    var bikes = document.querySelectorAll('.bike-item');
+
+    // Parcurge fiecare bicicletă și ascunde cele care nu se potrivesc cu termenul de căutare
+    bikes.forEach(function(bike) {
+        var bikeName = bike.querySelector('h3').innerText.toLowerCase();
+        if (bikeName.includes(searchTerm)) {
+            bike.style.display = 'block';
+        } else {
+            bike.style.display = 'none';
+        }
+    });
+}
