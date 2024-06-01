@@ -2,18 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bike Reservation</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            background-image: url('backround2.jpg');
-            background-size: cover;
-            background-position: center;
-            /* Alte stiluri CSS pentru pagina de rezervare */
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -30,7 +21,9 @@
         <h2>Bike Reservation</h2>
         <form id="reservation-form">
             <label for="bike-type">Bike Type:</label>
-            <input type="text" id="bike-type" name="bike-type" required>
+            <select id="bike-type" name="bike-type">
+                <!-- Tipurile de biciclete vor fi generate din JavaScript -->
+            </select>
             <label for="pickup-location">Pickup Location:</label>
             <input type="text" id="pickup-location" name="pickup-location" required>
             <label for="pickup-date">Pickup Date:</label>

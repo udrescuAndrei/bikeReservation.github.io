@@ -57,3 +57,29 @@ function searchBikes() {
         }
     });
 }
+document.addEventListener('DOMContentLoaded', () => {
+    // Obține tipurile de biciclete din API
+    const bikeTypeSelect = document.getElementById('bike-type');
+
+    fetch('https://api.citybik.es/v2/networks')
+        .then(response => response.json())
+        .then(data => {
+            // Adaugă tipuri de biciclete fictive pentru demonstrație
+            const bikeTypes = [
+                { id: 1, name: 'Mountain Bike' },
+                { id: 2, name: 'Road Bike' },
+                { id: 3, name: 'Hybrid Bike' },
+                { id: 4, name: 'Electric Bike' },
+                { id: 5, name: 'BMX Bike' }
+            ];
+            
+            // Adaugă fiecare tip de bicicletă în meniul derulant
+            bikeTypes.forEach(bikeType => {
+                const option = document.createElement('option');
+                option.text = bikeType.name;
+                option.value = bikeType.id;
+                bikeTypeSelect.add(option);
+            });
+        })
+        .catch(error => console.error('Error fetching bike types:', error));
+});
