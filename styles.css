@@ -1,19 +1,28 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 1em;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 1rem 0;
     text-align: center;
 }
 
+header h1 {
+    margin: 0;
+}
+
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
@@ -23,99 +32,114 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
-main {
-    padding: 2em;
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: absolute;
-    bottom: 0;
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 5px;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input[type="email"],
+form input[type="text"],
+form select {
     width: 100%;
-}
-
-.bike-list {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.bike-item {
-    border: 1px solid #ccc;
-    margin: 1em;
-    padding: 1em;
-    width: calc(33% - 2em);
-}
-
-.bike-item img {
-    max-width: 100%;
-    height: auto;
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-size: cover;
-    background-position: center;
-}
-.bike-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.bike-item {
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
     padding: 10px;
-    width: calc(33% - 20px);
-    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.bike-item img {
-    max-width: 100%;
-    height: auto;
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .bike-item {
-        width: calc(50% - 20px);
-    }
+form button:hover {
+    background-color: #555;
 }
 
-@media (max-width: 480px) {
-    .bike-item {
-        width: 100%;
-    }
-}
-body {
-    background-image: url('bicycle-route-backround.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Alte stiluri CSS pentru pagina de index */
-}
-body {
-    background-image: url('path/to/background_image_catalog.jpg');
-
-    /* Alte stiluri CSS pentru pagina de catalog */
-}
-body {
-    background-image: url('backround2.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Alte stiluri CSS pentru pagina de rezervare */
-}
-body {
-    background-image: url('../images/background_image_catalog.jpg');
-    background-size: cover;
-    background-position: center;
+h2 {
+    text-align: center;
+    margin-top: 2rem;
 }
 
+.bike-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 5px;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.bike-item h3 {
+    margin: 0 0 10px;
+}
+
+.bike-item p {
+    margin: 0;
+}
+
+/* Specific Page Backgrounds */
+body.index-page {
+    background-image: url('backround4.jpg');
+}
+
+body.catalog-page {
+    background-image: url('backround4.jpg');
+}
+
+body.reservation-page {
+    background-image: url('backround4.jpg');
+}
+
+/* Search Bar and Button Styling */
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+.search-container button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 0 5px 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #555;
+}

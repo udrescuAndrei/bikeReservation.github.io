@@ -42,8 +42,43 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
         .catch(error => console.error('Error fetching bike data:', error));
-});
 
+    // Handle the email form submission on index.html
+    const emailForm = document.getElementById('email-form');
+    if (emailForm) {
+        emailForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            localStorage.setItem('userEmail', email);
+            alert('Email saved! You can now proceed to make a reservation.');
+        });
+    }
+
+    // Handle the reservation form submission on reservation.html
+    const reservationForm = document.getElementById('reservation-form');
+    if (reservationForm) {
+        reservationForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const bikeType = document.getElementById('bike-type').value;
+            const email = localStorage.getItem('userEmail') || document.getElementById('email').value;
+
+            // Send the email with the reservation details using EmailJS
+            const templateParams = {
+                email: email,
+                bike_type: bikeType,
+            };
+
+            emailjs.send('service_664jv0n', 'template_lm9tmrv', templateParams)
+                .then(response => {
+                    alert('Reservation email sent successfully!');
+                    console.log('SUCCESS!', response.status, response.text);
+                }, error => {
+                    alert('Failed to send reservation email.');
+                    console.log('FAILED...', error);
+                });
+        });
+    }
+});
 function searchBikes() {
     // Obține termenul de căutare introdus de utilizator
     var searchTerm = document.getElementById('search-input').value.toLowerCase();

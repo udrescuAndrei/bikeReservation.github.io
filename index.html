@@ -8,15 +8,9 @@
     <link rel="stylesheet" href="styles.css">
     <title>Index Page</title>
     <style>
-        body {
-            background-image: url('bicycle-route-backround.jpg');
-            background-size: cover;
-            background-position: center;
-            /* Alte stiluri CSS pentru pagina de index */
-        }
     </style>
 </head>
-<body>
+<body class="index-page">
     <header>
         <h1>Bike Rental Service</h1>
         <nav>
@@ -26,14 +20,24 @@
                 <li><a href="reservation.html">Reservation</a></li>
             </ul>
         </nav>
+       
     </header>
+
     <main>
+       
         <h2>Welcome to Our Bike Rental Service</h2>
-        <p>Find and rent a bike easily!</p>
+        <form id="email-form">
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Submit</button>
+        </form>
     </main>
-    <footer>
-        <p>&copy; 2024 Bike Rental Service</p>
-    </footer>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("KjHXbKyX3ejO6ZfXE"); 
+        })();
+    </script>
     <script src="main.js"></script>
 </body>
 </html>

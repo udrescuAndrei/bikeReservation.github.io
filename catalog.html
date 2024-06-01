@@ -6,7 +6,7 @@
     <title>Bike Catalog</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="catalog-page">
     <header>
         <h1>Bike Rental Service</h1>
         <nav>
@@ -18,8 +18,8 @@
         </nav>
     </header>
     <main>
-        <h2>Bike Catalog</h2>
-        <div id="search-container">
+        <h2>Locations List</h2>
+        <div class="search-container">
             <input type="text" id="search-input" placeholder="Search...">
             <button onclick="searchBikes()">Search</button>
         </div>
@@ -27,9 +27,6 @@
             <!-- Stațiile de biciclete vor fi generate din JavaScript -->
         </div>
     </main>
-    <footer>
-        <p>&copy; 2024 Bike Rental Service</p>
-    </footer>
     <script src="main.js"></script>
 </body>
 </html>
