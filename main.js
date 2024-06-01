@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bikeList = document.getElementById('bike-list');
     const bikeTypeSelect = document.getElementById('bike-type');
 
-    // Fetch data from the CityBikes API
+    // Fetch data from the CityBikes API using HTTPS
     fetch('https://api.citybik.es/v2/networks')
         .then(response => {
             if (!response.ok) {
@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching bike data:', error));
 });
+
 function searchBikes() {
     // Obține termenul de căutare introdus de utilizator
     var searchTerm = document.getElementById('search-input').value.toLowerCase();
