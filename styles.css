@@ -112,4 +112,10 @@ body {
     background-position: center;
     /* Alte stiluri CSS pentru pagina de rezervare */
 }
+body {
+    background-image: url('../images/background_image_catalog.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 
